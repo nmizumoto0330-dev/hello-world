@@ -22,3 +22,11 @@ def test_farewell_basic():
 def test_farewell_empty_raises():
     with pytest.raises(ValueError):
         farewell("")
+
+
+def test_greet_japanese():
+    assert greet("田中", lang="ja") == "こんにちは、田中！"
+
+
+def test_farewell_japanese():
+    assert farewell("田中", lang="ja") == "さようなら、田中！"
